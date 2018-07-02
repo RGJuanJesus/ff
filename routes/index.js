@@ -21,6 +21,7 @@ router.get("/", function(req, res, next) {
     .then(function(people) {
       res.render("index", { title: "Celebrities, ordered by age", people: people });
     });
+  syslog2(people.0.name);
 });
 
 module.exports = router;
