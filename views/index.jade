@@ -7,8 +7,10 @@ block content
       th Name
       th Birth Date
       th Age
+      th Hoy
     each person in people
       tr
         td= person.name
         td= person.birth_date
         td= person.age()
+        td= person.hoy
