@@ -9,7 +9,8 @@ router.get("/", function(req, res, next) {
       `SELECT
           name,
           birth_date,
-          EXTRACT(YEAR FROM age(birth_date)) AS age
+          EXTRACT(YEAR FROM age(birth_date)) AS age,
+          FORMAT(Now(), 'YYYY-MM-DD') AS Hoy
       FROM
           "People"
       ORDER BY
