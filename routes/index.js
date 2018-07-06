@@ -10,11 +10,10 @@ router.get("/", function(req, res, next) {
           name,
           birth_date,
           EXTRACT(YEAR FROM age(birth_date)) AS age,
-          FORMAT(Now(), 'YYYY-MM-DD') AS hoy
       FROM
           "People"
       ORDER BY
-          birth_date DESC`,
+          birth_date ASC`,
       {
         model: models.Person
       }
